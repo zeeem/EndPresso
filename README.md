@@ -47,15 +47,17 @@ The output file will be saved in the `output` directory with the filename `res.j
 
 
 
-## Compression Example
+## Compression Results
 
 ![Result Comparison](https://github.com/zeeem/EndPresso/blob/master/temp/res_comparison.png)
 
 ![Compression Information](https://github.com/zeeem/EndPresso/blob/master/temp/res_compression_info.png)
 
 
+
 ## Developers
 [Naimur Rahman Jeem](https://www.linkedin.com/in/zeeem/)
+
 [Hanming Li](https://www.linkedin.com/in/hanming-li-306b11199/)
 
 ## Acknowledgements
