@@ -50,9 +50,9 @@ The output file will be saved in the `output` directory with the filename `res.j
 
 ## Compression Example
 
-![Result Comparison]()
+![Result Comparison](https://github.com/zeeem/EndPresso/blob/master/temp/res_comparison.png)
 
-![Compression Information]()
+![Compression Information](https://github.com/zeeem/EndPresso/blob/master/temp/res_compression_info.png)
 
 
 
