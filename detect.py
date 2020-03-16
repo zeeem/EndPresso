@@ -57,10 +57,10 @@ def arg_parse():
    
     parser.add_argument("--images", dest = 'images', help = 
                         "Image / Directory containing images to perform detection upon",
-                        default = "imgs", type = str)
+                        default = "images", type = str)
     parser.add_argument("--det", dest = 'det', help = 
                         "Image / Directory to store detections to",
-                        default = "det", type = str)
+                        default = "output", type = str)
     parser.add_argument("--bs", dest = "bs", help = "Batch size", default = 1)
     parser.add_argument("--confidence", dest = "confidence", help = "Object Confidence to filter predictions", default = 0.5)
     parser.add_argument("--nms_thresh", dest = "nms_thresh", help = "NMS Threshhold", default = 0.4)
@@ -355,13 +355,18 @@ if __name__ ==  '__main__':
       
     det_names = pd.Series(imlist).apply(lambda x: "{}/det_{}".format(args.det,x.split("/")[-1]))
     # trivia_img=cv2.cvtColor(trivia_img, cv2.COLOR_RGB2BGR) 
-    cv2.imwrite('res.jpg', trivia_img)    
+    cv2.imwrite('output/res.jpg', trivia_img)    
     # list(map(cv2.imwrite, det_names, orig_ims))
-    
+
+    try: 
+    	os.remove('trivia_img.JPG')
+    except:
+    	pass
+
     end = time.time()
 
 
-    compressed_size = os.path.getsize('res.jpg')
+    compressed_size = os.path.getsize('output/res.jpg')
     original_size = os.path.getsize(str_imlist)
     ratio = original_size/compressed_size   
     
